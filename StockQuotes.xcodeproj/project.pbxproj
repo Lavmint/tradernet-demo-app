@@ -7,19 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39D903382537827000AB54FB /* StockQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D903372537827000AB54FB /* StockQuotesApp.swift */; };
-		39D9033A2537827000AB54FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D903392537827000AB54FB /* ContentView.swift */; };
 		39D9033C2537827000AB54FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D9033B2537827000AB54FB /* Assets.xcassets */; };
 		39D9033F2537827000AB54FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D9033E2537827000AB54FB /* Preview Assets.xcassets */; };
+		39D90358253782B200AB54FB /* StockQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9034D253782B200AB54FB /* StockQuotesApp.swift */; };
+		39D90359253782B200AB54FB /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9034F253782B200AB54FB /* StockQuote.swift */; };
+		39D9035A253782B200AB54FB /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90350253782B200AB54FB /* Providers.swift */; };
+		39D9035B253782B200AB54FB /* StockQuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90352253782B200AB54FB /* StockQuotesListView.swift */; };
+		39D9035C253782B200AB54FB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90354253782B200AB54FB /* View.swift */; };
+		39D9035D253782B200AB54FB /* StatefulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90355253782B200AB54FB /* StatefulWidget.swift */; };
+		39D9035E253782B200AB54FB /* StreamBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90356253782B200AB54FB /* StreamBuilder.swift */; };
+		39D9035F253782B200AB54FB /* MultiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90357253782B200AB54FB /* MultiProvider.swift */; };
+		39D9036A253782CB00AB54FB /* TradernetClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D90368253782CB00AB54FB /* TradernetClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39D9036D253782CB00AB54FB /* TradernetClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D90366253782CB00AB54FB /* TradernetClient.framework */; };
+		39D9036E253782CB00AB54FB /* TradernetClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D90366253782CB00AB54FB /* TradernetClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39D90377253782E600AB54FB /* StockQuoteDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90375253782E600AB54FB /* StockQuoteDiff.swift */; };
+		39D90378253782E700AB54FB /* TradernetSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90376253782E600AB54FB /* TradernetSocketManager.swift */; };
+		D99A842B26D869E63448C382 /* Pods_StockQuotes_TradernetClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3332FCCF52F7678CA7E665A7 /* Pods_StockQuotes_TradernetClient.framework */; };
+		ED73AFC9B828D042A03DF23E /* Pods_StockQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380A9DEB5D5A52069C779179 /* Pods_StockQuotes.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		39D9036B253782CB00AB54FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39D9032C2537826F00AB54FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39D90365253782CB00AB54FB;
+			remoteInfo = TradernetClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		39D90372253782CB00AB54FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				39D9036E253782CB00AB54FB /* TradernetClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3332FCCF52F7678CA7E665A7 /* Pods_StockQuotes_TradernetClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockQuotes_TradernetClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		380A9DEB5D5A52069C779179 /* Pods_StockQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D903342537827000AB54FB /* StockQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		39D903372537827000AB54FB /* StockQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuotesApp.swift; sourceTree = "<group>"; };
-		39D903392537827000AB54FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39D9033B2537827000AB54FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39D9033E2537827000AB54FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		39D903402537827000AB54FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D9034D253782B200AB54FB /* StockQuotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuotesApp.swift; sourceTree = "<group>"; };
+		39D9034F253782B200AB54FB /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
+		39D90350253782B200AB54FB /* Providers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
+		39D90352253782B200AB54FB /* StockQuotesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuotesListView.swift; sourceTree = "<group>"; };
+		39D90354253782B200AB54FB /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		39D90355253782B200AB54FB /* StatefulWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulWidget.swift; sourceTree = "<group>"; };
+		39D90356253782B200AB54FB /* StreamBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamBuilder.swift; sourceTree = "<group>"; };
+		39D90357253782B200AB54FB /* MultiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiProvider.swift; sourceTree = "<group>"; };
+		39D90366253782CB00AB54FB /* TradernetClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TradernetClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39D90368253782CB00AB54FB /* TradernetClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TradernetClient.h; sourceTree = "<group>"; };
+		39D90369253782CB00AB54FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D90375253782E600AB54FB /* StockQuoteDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteDiff.swift; sourceTree = "<group>"; };
+		39D90376253782E600AB54FB /* TradernetSocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradernetSocketManager.swift; sourceTree = "<group>"; };
+		3B72B7BB38C25710213A91D4 /* Pods-StockQuotes-TradernetClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes-TradernetClient.release.xcconfig"; path = "Target Support Files/Pods-StockQuotes-TradernetClient/Pods-StockQuotes-TradernetClient.release.xcconfig"; sourceTree = "<group>"; };
+		4C3883E7D16185748689DC67 /* Pods-StockQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes.debug.xcconfig"; path = "Target Support Files/Pods-StockQuotes/Pods-StockQuotes.debug.xcconfig"; sourceTree = "<group>"; };
+		C9D1E1240688D7A43A028135 /* Pods-StockQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes.release.xcconfig"; path = "Target Support Files/Pods-StockQuotes/Pods-StockQuotes.release.xcconfig"; sourceTree = "<group>"; };
+		E8E9A1BD3A181739D01DAA70 /* Pods-StockQuotes-TradernetClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes-TradernetClient.debug.xcconfig"; path = "Target Support Files/Pods-StockQuotes-TradernetClient/Pods-StockQuotes-TradernetClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +81,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D9036D253782CB00AB54FB /* TradernetClient.framework in Frameworks */,
+				ED73AFC9B828D042A03DF23E /* Pods_StockQuotes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39D90363253782CB00AB54FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99A842B26D869E63448C382 /* Pods_StockQuotes_TradernetClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38FC4ADCE7D1DFAEAC58086E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				380A9DEB5D5A52069C779179 /* Pods_StockQuotes.framework */,
+				3332FCCF52F7678CA7E665A7 /* Pods_StockQuotes_TradernetClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		39D9032B2537826F00AB54FB = {
 			isa = PBXGroup;
 			children = (
 				39D903362537827000AB54FB /* StockQuotes */,
+				39D90367253782CB00AB54FB /* TradernetClient */,
 				39D903352537827000AB54FB /* Products */,
+				C97795ABF0F1B6B150E64B30 /* Pods */,
+				38FC4ADCE7D1DFAEAC58086E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				39D903342537827000AB54FB /* StockQuotes.app */,
+				39D90366253782CB00AB54FB /* TradernetClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,11 +129,10 @@
 		39D903362537827000AB54FB /* StockQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				39D903372537827000AB54FB /* StockQuotesApp.swift */,
-				39D903392537827000AB54FB /* ContentView.swift */,
 				39D9033B2537827000AB54FB /* Assets.xcassets */,
-				39D903402537827000AB54FB /* Info.plist */,
 				39D9033D2537827000AB54FB /* Preview Content */,
+				39D9034C253782B200AB54FB /* Source */,
+				39D903402537827000AB54FB /* Info.plist */,
 			);
 			path = StockQuotes;
 			sourceTree = "<group>";
@@ -69,25 +145,129 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		39D9034C253782B200AB54FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				39D90353253782B200AB54FB /* Base */,
+				39D90351253782B200AB54FB /* Views */,
+				39D9034E253782B200AB54FB /* Models */,
+				39D9034D253782B200AB54FB /* StockQuotesApp.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		39D9034E253782B200AB54FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39D9034F253782B200AB54FB /* StockQuote.swift */,
+				39D90350253782B200AB54FB /* Providers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		39D90351253782B200AB54FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39D90352253782B200AB54FB /* StockQuotesListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39D90353253782B200AB54FB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				39D90354253782B200AB54FB /* View.swift */,
+				39D90355253782B200AB54FB /* StatefulWidget.swift */,
+				39D90356253782B200AB54FB /* StreamBuilder.swift */,
+				39D90357253782B200AB54FB /* MultiProvider.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		39D90367253782CB00AB54FB /* TradernetClient */ = {
+			isa = PBXGroup;
+			children = (
+				39D90374253782E600AB54FB /* Source */,
+				39D90368253782CB00AB54FB /* TradernetClient.h */,
+				39D90369253782CB00AB54FB /* Info.plist */,
+			);
+			path = TradernetClient;
+			sourceTree = "<group>";
+		};
+		39D90374253782E600AB54FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				39D90375253782E600AB54FB /* StockQuoteDiff.swift */,
+				39D90376253782E600AB54FB /* TradernetSocketManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C97795ABF0F1B6B150E64B30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C3883E7D16185748689DC67 /* Pods-StockQuotes.debug.xcconfig */,
+				C9D1E1240688D7A43A028135 /* Pods-StockQuotes.release.xcconfig */,
+				E8E9A1BD3A181739D01DAA70 /* Pods-StockQuotes-TradernetClient.debug.xcconfig */,
+				3B72B7BB38C25710213A91D4 /* Pods-StockQuotes-TradernetClient.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		39D90361253782CB00AB54FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D9036A253782CB00AB54FB /* TradernetClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		39D903332537826F00AB54FB /* StockQuotes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39D903432537827000AB54FB /* Build configuration list for PBXNativeTarget "StockQuotes" */;
 			buildPhases = (
+				49E28C15CBE82EC185CAFAE2 /* [CP] Check Pods Manifest.lock */,
 				39D903302537826F00AB54FB /* Sources */,
 				39D903312537826F00AB54FB /* Frameworks */,
 				39D903322537826F00AB54FB /* Resources */,
+				39D90372253782CB00AB54FB /* Embed Frameworks */,
+				20CD3A0C7A0E24E6221CC4A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				39D9036C253782CB00AB54FB /* PBXTargetDependency */,
 			);
 			name = StockQuotes;
 			productName = StockQuotes;
 			productReference = 39D903342537827000AB54FB /* StockQuotes.app */;
 			productType = "com.apple.product-type.application";
+		};
+		39D90365253782CB00AB54FB /* TradernetClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39D9036F253782CB00AB54FB /* Build configuration list for PBXNativeTarget "TradernetClient" */;
+			buildPhases = (
+				BA513693768FC553A1CB7B06 /* [CP] Check Pods Manifest.lock */,
+				39D90361253782CB00AB54FB /* Headers */,
+				39D90362253782CB00AB54FB /* Sources */,
+				39D90363253782CB00AB54FB /* Frameworks */,
+				39D90364253782CB00AB54FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradernetClient;
+			productName = TradernetClient;
+			productReference = 39D90366253782CB00AB54FB /* TradernetClient.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +279,9 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					39D903332537826F00AB54FB = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					39D90365253782CB00AB54FB = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -117,6 +300,7 @@
 			projectRoot = "";
 			targets = (
 				39D903332537826F00AB54FB /* StockQuotes */,
+				39D90365253782CB00AB54FB /* TradernetClient */,
 			);
 		};
 /* End PBXProject section */
@@ -131,19 +315,113 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		39D90364253782CB00AB54FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20CD3A0C7A0E24E6221CC4A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockQuotes/Pods-StockQuotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockQuotes/Pods-StockQuotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockQuotes/Pods-StockQuotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49E28C15CBE82EC185CAFAE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockQuotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA513693768FC553A1CB7B06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockQuotes-TradernetClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39D903302537826F00AB54FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D9033A2537827000AB54FB /* ContentView.swift in Sources */,
-				39D903382537827000AB54FB /* StockQuotesApp.swift in Sources */,
+				39D9035B253782B200AB54FB /* StockQuotesListView.swift in Sources */,
+				39D90358253782B200AB54FB /* StockQuotesApp.swift in Sources */,
+				39D9035C253782B200AB54FB /* View.swift in Sources */,
+				39D9035D253782B200AB54FB /* StatefulWidget.swift in Sources */,
+				39D9035F253782B200AB54FB /* MultiProvider.swift in Sources */,
+				39D90359253782B200AB54FB /* StockQuote.swift in Sources */,
+				39D9035E253782B200AB54FB /* StreamBuilder.swift in Sources */,
+				39D9035A253782B200AB54FB /* Providers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39D90362253782CB00AB54FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D90378253782E700AB54FB /* TradernetSocketManager.swift in Sources */,
+				39D90377253782E600AB54FB /* StockQuoteDiff.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39D9036C253782CB00AB54FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39D90365253782CB00AB54FB /* TradernetClient */;
+			targetProxy = 39D9036B253782CB00AB54FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		39D903412537827000AB54FB /* Debug */ = {
@@ -264,7 +542,9 @@
 		};
 		39D903442537827000AB54FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C3883E7D16185748689DC67 /* Pods-StockQuotes.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -285,7 +565,9 @@
 		};
 		39D903452537827000AB54FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D1E1240688D7A43A028135 /* Pods-StockQuotes.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +583,60 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		39D90370253782CB00AB54FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E9A1BD3A181739D01DAA70 /* Pods-StockQuotes-TradernetClient.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TradernetClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.aaverkin.TradernetClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39D90371253782CB00AB54FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B72B7BB38C25710213A91D4 /* Pods-StockQuotes-TradernetClient.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TradernetClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.aaverkin.TradernetClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -321,6 +657,15 @@
 			buildConfigurations = (
 				39D903442537827000AB54FB /* Debug */,
 				39D903452537827000AB54FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39D9036F253782CB00AB54FB /* Build configuration list for PBXNativeTarget "TradernetClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39D90370253782CB00AB54FB /* Debug */,
+				39D90371253782CB00AB54FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
