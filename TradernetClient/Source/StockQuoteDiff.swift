@@ -18,17 +18,41 @@ public struct StockQuoteDiff: Decodable {
     }
     
     /// Тикер
-    public let ticker: String
+    public private(set) var ticker: String
     
     /// Название бумаги
-    public let name: String?
+    public private(set) var name: String?
     
     /// Изменение в процентах относительно цены закрытия предыдущей торговой сессии
-    public let percentageChangePrice: Float?
+    public private(set) var percentageChangePrice: Float?
     
     /// Цена последней сделки
-    public let lastTradePrice: Float?
+    public private(set) var lastTradePrice: Float?
     
     /// Изменение цены последней сделки в пунктах относительно цены закрытия предыдущей торговой сессии
-    public let change: Float?
+    public private(set) var change: Float?
+
+}
+
+public extension StockQuoteDiff {
+    
+    func merged(with diff: StockQuoteDiff) -> StockQuoteDiff {
+        var s = self
+        s.name.updateIfNotNil(diff.name)
+        s.percentageChangePrice.updateIfNotNil(diff.percentageChangePrice)
+        s.lastTradePrice.updateIfNotNil(diff.lastTradePrice)
+        s.change.updateIfNotNil(diff.change)
+        return s
+    }
+    
+    var hasValues: Bool {
+        let conditions: [Bool] = [
+            name != nil,
+            percentageChangePrice != nil,
+            lastTradePrice != nil,
+            change != nil
+        ]
+        return conditions.filter({ $0 == true }).count == conditions.count
+    }
+    
 }

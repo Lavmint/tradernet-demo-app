@@ -46,7 +46,11 @@ public class MultiProvider {
     }
     
     public func of<T: Provider>(_ type: T.Type) -> T {
-        let provider: Provider = _providers[T.className.hash] ?? T.create()
+        if let provider = _providers[T.className.hash] {
+            return provider as! T
+        }
+        let provider = T.create()
+        _providers[T.className.hash] = provider
         return provider as! T
     }
     

@@ -23,6 +23,12 @@ open class TradernetSocketManager: SocketManager {
             .replaceError(with: [])
             .eraseToAnyPublisher()
     }
+    public func onQuote(ticker: String) -> AnyPublisher<StockQuoteDiff, Never> {
+        onQuotes
+            .filter({ $0.contains(where: { $0.ticker == ticker }) })
+            .map({ $0.first(where: { $0.ticker == ticker })! })
+            .eraseToAnyPublisher()
+    }
     
     private let _onQuotes = PassthroughSubject<[Any], Never>()
     private var _decoder: JSONDecoder = JSONDecoder()

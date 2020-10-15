@@ -13,7 +13,7 @@ struct StockQuotesApp: App {
     
     var body: some Scene {
         WindowGroup {
-            StockQuotesListView()
+            StockQuoteListView()
         }
     }
     
