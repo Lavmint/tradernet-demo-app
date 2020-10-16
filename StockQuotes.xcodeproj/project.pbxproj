@@ -22,9 +22,6 @@
 		39D90359253782B200AB54FB /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9034F253782B200AB54FB /* StockQuote.swift */; };
 		39D9035A253782B200AB54FB /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90350253782B200AB54FB /* Providers.swift */; };
 		39D9035B253782B200AB54FB /* StockQuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90352253782B200AB54FB /* StockQuoteListView.swift */; };
-		39D9035C253782B200AB54FB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90354253782B200AB54FB /* View.swift */; };
-		39D9035D253782B200AB54FB /* StatefulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90355253782B200AB54FB /* StatefulWidget.swift */; };
-		39D9035E253782B200AB54FB /* StreamBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90356253782B200AB54FB /* StreamBuilder.swift */; };
 		39D9035F253782B200AB54FB /* MultiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90357253782B200AB54FB /* MultiProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,9 +55,6 @@
 		39D9034F253782B200AB54FB /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
 		39D90350253782B200AB54FB /* Providers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
 		39D90352253782B200AB54FB /* StockQuoteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteListView.swift; sourceTree = "<group>"; };
-		39D90354253782B200AB54FB /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		39D90355253782B200AB54FB /* StatefulWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulWidget.swift; sourceTree = "<group>"; };
-		39D90356253782B200AB54FB /* StreamBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamBuilder.swift; sourceTree = "<group>"; };
 		39D90357253782B200AB54FB /* MultiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,9 +168,6 @@
 		39D90353253782B200AB54FB /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				39D90354253782B200AB54FB /* View.swift */,
-				39D90355253782B200AB54FB /* StatefulWidget.swift */,
-				39D90356253782B200AB54FB /* StreamBuilder.swift */,
 				39D90357253782B200AB54FB /* MultiProvider.swift */,
 			);
 			path = Base;
@@ -259,13 +250,10 @@
 				39D9035B253782B200AB54FB /* StockQuoteListView.swift in Sources */,
 				39198492253799B100C95C09 /* NumberFormatter.swift in Sources */,
 				39D90358253782B200AB54FB /* StockQuotesApp.swift in Sources */,
-				39D9035C253782B200AB54FB /* View.swift in Sources */,
-				39D9035D253782B200AB54FB /* StatefulWidget.swift in Sources */,
 				399E5CFF2538CF3800BDA354 /* StockQuoteRowView+LastBidChange.swift in Sources */,
 				39D9035F253782B200AB54FB /* MultiProvider.swift in Sources */,
 				399E5CFB2538CEDF00BDA354 /* StockQuoteRowView+LastPrice.swift in Sources */,
 				39D90359253782B200AB54FB /* StockQuote.swift in Sources */,
-				39D9035E253782B200AB54FB /* StreamBuilder.swift in Sources */,
 				3919849F25379C9A00C95C09 /* Publisher.swift in Sources */,
 				399E5D1B2538EF9C00BDA354 /* StockQuoteRowView.swift in Sources */,
 				39D9035A253782B200AB54FB /* Providers.swift in Sources */,
