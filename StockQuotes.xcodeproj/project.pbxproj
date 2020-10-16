@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		39198492253799B100C95C09 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39198491253799B100C95C09 /* NumberFormatter.swift */; };
 		3919849F25379C9A00C95C09 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3919849E25379C9A00C95C09 /* Publisher.swift */; };
+		394786F52539046E0002669B /* TradernetClient in Frameworks */ = {isa = PBXBuildFile; productRef = 394786F42539046E0002669B /* TradernetClient */; };
+		3947870D253905220002669B /* StockQuotesLibrary in Resources */ = {isa = PBXBuildFile; fileRef = 3947870C253905220002669B /* StockQuotesLibrary */; };
 		399E5CEB2538A5A000BDA354 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E5CEA2538A5A000BDA354 /* Optional.swift */; };
 		399E5CFB2538CEDF00BDA354 /* StockQuoteRowView+LastPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E5CFA2538CEDF00BDA354 /* StockQuoteRowView+LastPrice.swift */; };
 		399E5CFF2538CF3800BDA354 /* StockQuoteRowView+LastBidChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E5CFE2538CF3800BDA354 /* StockQuoteRowView+LastBidChange.swift */; };
 		399E5D022538CFC400BDA354 /* StockQuoteRowView+YesterdayCloseChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E5D012538CFC400BDA354 /* StockQuoteRowView+YesterdayCloseChange.swift */; };
-		399E5D122538D5DD00BDA354 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E5D112538D5DD00BDA354 /* Optional.swift */; };
 		399E5D1B2538EF9C00BDA354 /* StockQuoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E5D1A2538EF9C00BDA354 /* StockQuoteRowView.swift */; };
 		39D9033C2537827000AB54FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D9033B2537827000AB54FB /* Assets.xcassets */; };
 		39D9033F2537827000AB54FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D9033E2537827000AB54FB /* Preview Assets.xcassets */; };
@@ -25,24 +26,7 @@
 		39D9035D253782B200AB54FB /* StatefulWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90355253782B200AB54FB /* StatefulWidget.swift */; };
 		39D9035E253782B200AB54FB /* StreamBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90356253782B200AB54FB /* StreamBuilder.swift */; };
 		39D9035F253782B200AB54FB /* MultiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90357253782B200AB54FB /* MultiProvider.swift */; };
-		39D9036A253782CB00AB54FB /* TradernetClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D90368253782CB00AB54FB /* TradernetClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39D9036D253782CB00AB54FB /* TradernetClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D90366253782CB00AB54FB /* TradernetClient.framework */; };
-		39D9036E253782CB00AB54FB /* TradernetClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D90366253782CB00AB54FB /* TradernetClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		39D90377253782E600AB54FB /* StockQuoteDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90375253782E600AB54FB /* StockQuoteDiff.swift */; };
-		39D90378253782E700AB54FB /* TradernetSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D90376253782E600AB54FB /* TradernetSocketManager.swift */; };
-		D99A842B26D869E63448C382 /* Pods_StockQuotes_TradernetClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3332FCCF52F7678CA7E665A7 /* Pods_StockQuotes_TradernetClient.framework */; };
-		ED73AFC9B828D042A03DF23E /* Pods_StockQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380A9DEB5D5A52069C779179 /* Pods_StockQuotes.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		39D9036B253782CB00AB54FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 39D9032C2537826F00AB54FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 39D90365253782CB00AB54FB;
-			remoteInfo = TradernetClient;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		39D90372253782CB00AB54FB /* Embed Frameworks */ = {
@@ -51,7 +35,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				39D9036E253782CB00AB54FB /* TradernetClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,15 +42,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3332FCCF52F7678CA7E665A7 /* Pods_StockQuotes_TradernetClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockQuotes_TradernetClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		380A9DEB5D5A52069C779179 /* Pods_StockQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39198491253799B100C95C09 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		3919849E25379C9A00C95C09 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		3947870C253905220002669B /* StockQuotesLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StockQuotesLibrary; sourceTree = "<group>"; };
 		399E5CEA2538A5A000BDA354 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		399E5CFA2538CEDF00BDA354 /* StockQuoteRowView+LastPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockQuoteRowView+LastPrice.swift"; sourceTree = "<group>"; };
 		399E5CFE2538CF3800BDA354 /* StockQuoteRowView+LastBidChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockQuoteRowView+LastBidChange.swift"; sourceTree = "<group>"; };
 		399E5D012538CFC400BDA354 /* StockQuoteRowView+YesterdayCloseChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockQuoteRowView+YesterdayCloseChange.swift"; sourceTree = "<group>"; };
-		399E5D112538D5DD00BDA354 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		399E5D1A2538EF9C00BDA354 /* StockQuoteRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteRowView.swift; sourceTree = "<group>"; };
 		39D903342537827000AB54FB /* StockQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D9033B2537827000AB54FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,15 +62,6 @@
 		39D90355253782B200AB54FB /* StatefulWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulWidget.swift; sourceTree = "<group>"; };
 		39D90356253782B200AB54FB /* StreamBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamBuilder.swift; sourceTree = "<group>"; };
 		39D90357253782B200AB54FB /* MultiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiProvider.swift; sourceTree = "<group>"; };
-		39D90366253782CB00AB54FB /* TradernetClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TradernetClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39D90368253782CB00AB54FB /* TradernetClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TradernetClient.h; sourceTree = "<group>"; };
-		39D90369253782CB00AB54FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39D90375253782E600AB54FB /* StockQuoteDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteDiff.swift; sourceTree = "<group>"; };
-		39D90376253782E600AB54FB /* TradernetSocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradernetSocketManager.swift; sourceTree = "<group>"; };
-		3B72B7BB38C25710213A91D4 /* Pods-StockQuotes-TradernetClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes-TradernetClient.release.xcconfig"; path = "Target Support Files/Pods-StockQuotes-TradernetClient/Pods-StockQuotes-TradernetClient.release.xcconfig"; sourceTree = "<group>"; };
-		4C3883E7D16185748689DC67 /* Pods-StockQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes.debug.xcconfig"; path = "Target Support Files/Pods-StockQuotes/Pods-StockQuotes.debug.xcconfig"; sourceTree = "<group>"; };
-		C9D1E1240688D7A43A028135 /* Pods-StockQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes.release.xcconfig"; path = "Target Support Files/Pods-StockQuotes/Pods-StockQuotes.release.xcconfig"; sourceTree = "<group>"; };
-		E8E9A1BD3A181739D01DAA70 /* Pods-StockQuotes-TradernetClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockQuotes-TradernetClient.debug.xcconfig"; path = "Target Support Files/Pods-StockQuotes-TradernetClient/Pods-StockQuotes-TradernetClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,31 +69,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D9036D253782CB00AB54FB /* TradernetClient.framework in Frameworks */,
-				ED73AFC9B828D042A03DF23E /* Pods_StockQuotes.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		39D90363253782CB00AB54FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D99A842B26D869E63448C382 /* Pods_StockQuotes_TradernetClient.framework in Frameworks */,
+				394786F52539046E0002669B /* TradernetClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38FC4ADCE7D1DFAEAC58086E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				380A9DEB5D5A52069C779179 /* Pods_StockQuotes.framework */,
-				3332FCCF52F7678CA7E665A7 /* Pods_StockQuotes_TradernetClient.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		391984902537999F00C95C09 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +84,13 @@
 				399E5CEA2538A5A000BDA354 /* Optional.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		394786F32539046E0002669B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		399E5CF72538CE8B00BDA354 /* Provider */ = {
@@ -152,10 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				39D903362537827000AB54FB /* StockQuotes */,
-				39D90367253782CB00AB54FB /* TradernetClient */,
+				3947870C253905220002669B /* StockQuotesLibrary */,
 				39D903352537827000AB54FB /* Products */,
-				C97795ABF0F1B6B150E64B30 /* Pods */,
-				38FC4ADCE7D1DFAEAC58086E /* Frameworks */,
+				394786F32539046E0002669B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				39D903342537827000AB54FB /* StockQuotes.app */,
-				39D90366253782CB00AB54FB /* TradernetClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,90 +182,29 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		39D90367253782CB00AB54FB /* TradernetClient */ = {
-			isa = PBXGroup;
-			children = (
-				39D90374253782E600AB54FB /* Source */,
-				39D90368253782CB00AB54FB /* TradernetClient.h */,
-				39D90369253782CB00AB54FB /* Info.plist */,
-			);
-			path = TradernetClient;
-			sourceTree = "<group>";
-		};
-		39D90374253782E600AB54FB /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				39D90375253782E600AB54FB /* StockQuoteDiff.swift */,
-				39D90376253782E600AB54FB /* TradernetSocketManager.swift */,
-				399E5D112538D5DD00BDA354 /* Optional.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		C97795ABF0F1B6B150E64B30 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4C3883E7D16185748689DC67 /* Pods-StockQuotes.debug.xcconfig */,
-				C9D1E1240688D7A43A028135 /* Pods-StockQuotes.release.xcconfig */,
-				E8E9A1BD3A181739D01DAA70 /* Pods-StockQuotes-TradernetClient.debug.xcconfig */,
-				3B72B7BB38C25710213A91D4 /* Pods-StockQuotes-TradernetClient.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		39D90361253782CB00AB54FB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				39D9036A253782CB00AB54FB /* TradernetClient.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		39D903332537826F00AB54FB /* StockQuotes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39D903432537827000AB54FB /* Build configuration list for PBXNativeTarget "StockQuotes" */;
 			buildPhases = (
-				49E28C15CBE82EC185CAFAE2 /* [CP] Check Pods Manifest.lock */,
 				39D903302537826F00AB54FB /* Sources */,
 				39D903312537826F00AB54FB /* Frameworks */,
 				39D903322537826F00AB54FB /* Resources */,
 				39D90372253782CB00AB54FB /* Embed Frameworks */,
-				20CD3A0C7A0E24E6221CC4A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				39D9036C253782CB00AB54FB /* PBXTargetDependency */,
 			);
 			name = StockQuotes;
+			packageProductDependencies = (
+				394786F42539046E0002669B /* TradernetClient */,
+			);
 			productName = StockQuotes;
 			productReference = 39D903342537827000AB54FB /* StockQuotes.app */;
 			productType = "com.apple.product-type.application";
-		};
-		39D90365253782CB00AB54FB /* TradernetClient */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 39D9036F253782CB00AB54FB /* Build configuration list for PBXNativeTarget "TradernetClient" */;
-			buildPhases = (
-				BA513693768FC553A1CB7B06 /* [CP] Check Pods Manifest.lock */,
-				39D90361253782CB00AB54FB /* Headers */,
-				39D90362253782CB00AB54FB /* Sources */,
-				39D90363253782CB00AB54FB /* Frameworks */,
-				39D90364253782CB00AB54FB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TradernetClient;
-			productName = TradernetClient;
-			productReference = 39D90366253782CB00AB54FB /* TradernetClient.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -318,9 +216,6 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					39D903332537826F00AB54FB = {
-						CreatedOnToolsVersion = 12.0;
-					};
-					39D90365253782CB00AB54FB = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -339,7 +234,6 @@
 			projectRoot = "";
 			targets = (
 				39D903332537826F00AB54FB /* StockQuotes */,
-				39D90365253782CB00AB54FB /* TradernetClient */,
 			);
 		};
 /* End PBXProject section */
@@ -351,81 +245,11 @@
 			files = (
 				39D9033F2537827000AB54FB /* Preview Assets.xcassets in Resources */,
 				39D9033C2537827000AB54FB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		39D90364253782CB00AB54FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3947870D253905220002669B /* StockQuotesLibrary in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		20CD3A0C7A0E24E6221CC4A2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StockQuotes/Pods-StockQuotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StockQuotes/Pods-StockQuotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockQuotes/Pods-StockQuotes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49E28C15CBE82EC185CAFAE2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StockQuotes-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA513693768FC553A1CB7B06 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StockQuotes-TradernetClient-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39D903302537826F00AB54FB /* Sources */ = {
@@ -450,25 +274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39D90362253782CB00AB54FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				39D90378253782E700AB54FB /* TradernetSocketManager.swift in Sources */,
-				39D90377253782E600AB54FB /* StockQuoteDiff.swift in Sources */,
-				399E5D122538D5DD00BDA354 /* Optional.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		39D9036C253782CB00AB54FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 39D90365253782CB00AB54FB /* TradernetClient */;
-			targetProxy = 39D9036B253782CB00AB54FB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		39D903412537827000AB54FB /* Debug */ = {
@@ -589,9 +395,7 @@
 		};
 		39D903442537827000AB54FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C3883E7D16185748689DC67 /* Pods-StockQuotes.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,9 +416,7 @@
 		};
 		39D903452537827000AB54FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9D1E1240688D7A43A028135 /* Pods-StockQuotes.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -630,60 +432,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		39D90370253782CB00AB54FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8E9A1BD3A181739D01DAA70 /* Pods-StockQuotes-TradernetClient.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TradernetClient/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.aaverkin.TradernetClient;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		39D90371253782CB00AB54FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B72B7BB38C25710213A91D4 /* Pods-StockQuotes-TradernetClient.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TradernetClient/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.aaverkin.TradernetClient;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -708,16 +456,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39D9036F253782CB00AB54FB /* Build configuration list for PBXNativeTarget "TradernetClient" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				39D90370253782CB00AB54FB /* Debug */,
-				39D90371253782CB00AB54FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		394786F42539046E0002669B /* TradernetClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TradernetClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39D9032C2537826F00AB54FB /* Project object */;
 }

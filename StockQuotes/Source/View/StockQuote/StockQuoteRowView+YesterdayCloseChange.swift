@@ -22,16 +22,18 @@ extension StockQuoteRowView {
         @State var state = YesterdayCloseChangeState()
         @Environment(\.provider) var provider
         
-        let ticker: String
+        let quote: StockQuote
         let formatter: NumberFormatter
-        let initialValue: Float
 
         var change: Float {
-            return state.yesterdayCloseChange ?? initialValue
+            return state.yesterdayCloseChange ?? quote.yesterdayCloseChange ?? Float.nan
         }
         
         var yesterdayCloseChangeString: String {
-            return formatter.string(from: change as NSNumber) ?? String(Float.nan)
+            guard let str = formatter.string(from: change as NSNumber) else {
+                return String(Float.nan)
+            }
+            return str
         }
         
         var foregroundColor: Color {
@@ -61,6 +63,7 @@ extension StockQuoteRowView {
                 .clipShape(RoundedRectangle(cornerRadius: 4))
                 .animation(.easeOut)
                 .onReceive(onPriceChangesFromPreviosDay.receiveOnMain) { (change) in
+                    quote.yesterdayCloseChange = change
                     state.yesterdayCloseChange = change
                     state.isUpdating = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -71,7 +74,7 @@ extension StockQuoteRowView {
         
         var onPriceChangesFromPreviosDay: AnyPublisher<Float, Never> {
             provider.of(TradernetSocketManager.self)
-                .onQuote(ticker: ticker)
+                .onQuote(ticker: quote.ticker)
                 .filter({ $0.percentageChangePrice != nil })
                 .map({ $0.percentageChangePrice! })
                 .removeDuplicates()

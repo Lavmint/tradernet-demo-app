@@ -33,26 +33,3 @@ public struct StockQuoteDiff: Decodable {
     public private(set) var change: Float?
 
 }
-
-public extension StockQuoteDiff {
-    
-    func merged(with diff: StockQuoteDiff) -> StockQuoteDiff {
-        var s = self
-        s.name.updateIfNotNil(diff.name)
-        s.percentageChangePrice.updateIfNotNil(diff.percentageChangePrice)
-        s.lastTradePrice.updateIfNotNil(diff.lastTradePrice)
-        s.change.updateIfNotNil(diff.change)
-        return s
-    }
-    
-    var hasValues: Bool {
-        let conditions: [Bool] = [
-            name != nil,
-            percentageChangePrice != nil,
-            lastTradePrice != nil,
-            change != nil
-        ]
-        return conditions.filter({ $0 == true }).count == conditions.count
-    }
-    
-}

@@ -17,25 +17,32 @@ extension StockQuoteRowView {
         @State var lastPrice: Float? = nil
         @Environment(\.provider) var provider
         
-        let ticker: String
+        let quote: StockQuote
         let formatter: NumberFormatter
-        let initialValue: Float
+        
+        var price: Float {
+            return lastPrice ?? quote.lastPrice ?? Float.nan
+        }
         
         var lastPriceString: String {
-            let price = lastPrice ?? initialValue
-            return formatter.string(from: price as NSNumber) ?? String(Float.nan)
+            guard let str = formatter.string(from: price as NSNumber) else {
+                return String(Float.nan)
+            }
+            return str
         }
         
         var body: some View {
             Text(lastPriceString)
+                .animation(.easeOut)
                 .onReceive(onLastPrice.receiveOnMain) { (price) in
+                    quote.lastPrice = price
                     lastPrice = price
                 }
         }
         
         var onLastPrice: AnyPublisher<Float, Never> {
             provider.of(TradernetSocketManager.self)
-                .onQuote(ticker: ticker)
+                .onQuote(ticker: quote.ticker)
                 .filter({ $0.lastTradePrice != nil })
                 .map({ $0.lastTradePrice! })
                 .removeDuplicates()

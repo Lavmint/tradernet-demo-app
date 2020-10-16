@@ -10,22 +10,29 @@ import TradernetClient
 
 class StockQuote {
      
-    private(set) var _quote: StockQuoteDiff
+    let ticker: String
+    var name: String?
+    var yesterdayCloseChange: Float?
+    var lastPrice: Float?
+    var lastBidChange: Float?
     
     init(quote: StockQuoteDiff) {
-        _quote = quote
+        ticker = quote.ticker
+        name = quote.name
+        yesterdayCloseChange = quote.percentageChangePrice
+        lastPrice = quote.lastTradePrice
+        lastBidChange = quote.change
     }
-    
-    func update(with quote: StockQuoteDiff) {
-        _quote = _quote.merged(with: quote)
-    }
-    
 }
 
-extension StockQuote: Identifiable {
+extension StockQuote: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(ticker)
+    }
     
-    var id: String {
-        return _quote.ticker
+    static func == (lhs: StockQuote, rhs: StockQuote) -> Bool {
+        return lhs.ticker == rhs.ticker
     }
     
 }

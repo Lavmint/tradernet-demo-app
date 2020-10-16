@@ -14,7 +14,7 @@ struct StockQuoteRowView: View {
 
     @Environment(\.provider) var provider
 
-    let quote: StockQuoteDiff
+    let quote: StockQuote
     let fyesterday: NumberFormatter
     let fprice: NumberFormatter
     let fday: NumberFormatter
@@ -24,31 +24,19 @@ struct StockQuoteRowView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(quote.ticker)
                     .font(.body)
-                Text(quote.name!)
+                Text(quote.name ?? "")
                     .font(.footnote)
                     .foregroundColor(.gray)
             }
-            Spacer()
+            Spacer(minLength: 16)
             VStack(alignment: .trailing, spacing: 8) {
-                YesterdayCloseChangeView(
-                    ticker: quote.ticker,
-                    formatter: fyesterday,
-                    initialValue: quote.percentageChangePrice!
-                )
-                .font(.body)
+                YesterdayCloseChangeView(quote: quote, formatter: fyesterday)
+                    .font(.body)
                 HStack(spacing: 8, content: {
-                    LastPriceView(
-                        ticker: quote.ticker,
-                        formatter: fprice,
-                        initialValue: quote.lastTradePrice!
-                    )
-                    .font(.footnote)
-                    LastBidChangeView(
-                        ticker: quote.ticker,
-                        formatter: fday,
-                        initialValue: quote.change!
-                    )
-                    .font(.footnote)
+                    LastPriceView(quote: quote, formatter: fprice)
+                        .font(.footnote)
+                    LastBidChangeView(quote: quote, formatter: fday)
+                        .font(.footnote)
                 })
             }
         }
