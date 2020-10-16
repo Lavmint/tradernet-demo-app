@@ -14,7 +14,8 @@ extension StockQuoteRowView {
     
     struct YesterdayCloseChangeState {
         var yesterdayCloseChange: Float? = nil
-        var isUpdating = false
+        var diff: Float = 0
+        var isAnimating = false
     }
     
     struct YesterdayCloseChangeView: View {
@@ -38,19 +39,19 @@ extension StockQuoteRowView {
         
         var foregroundColor: Color {
             if change > 0 {
-                return state.isUpdating ? Color.white : Color.green
+                return state.isAnimating ? Color.white : Color.green
             } else if change < 0 {
-                return state.isUpdating ? Color.white : Color.red
+                return state.isAnimating ? Color.white : Color.red
             } else {
                 return Color.black
             }
         }
         
         var rectangleColor: Color {
-            if change > 0 {
-                return state.isUpdating ? Color.green : Color.clear
-            } else if change < 0 {
-                return state.isUpdating ? Color.red : Color.clear
+            if state.diff > 0 {
+                return state.isAnimating ? Color.green : Color.clear
+            } else if state.diff < 0 {
+                return state.isAnimating ? Color.red : Color.clear
             } else {
                 return Color.clear
             }
@@ -63,11 +64,14 @@ extension StockQuoteRowView {
                 .clipShape(RoundedRectangle(cornerRadius: 4))
                 .animation(.easeOut)
                 .onReceive(onPriceChangesFromPreviosDay.receiveOnMain) { (change) in
+                    if let old = quote.yesterdayCloseChange {
+                        state.diff = change - old
+                    }
                     quote.yesterdayCloseChange = change
                     state.yesterdayCloseChange = change
-                    state.isUpdating = true
+                    state.isAnimating = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        state.isUpdating = false
+                        state.isAnimating = false
                     }
                 }
         }
@@ -75,8 +79,7 @@ extension StockQuoteRowView {
         var onPriceChangesFromPreviosDay: AnyPublisher<Float, Never> {
             provider.of(TradernetSocketManager.self)
                 .onQuote(ticker: quote.ticker)
-                .filter({ $0.percentageChangePrice != nil })
-                .map({ $0.percentageChangePrice! })
+                .compactMap({ $0.percentageChangePrice })
                 .removeDuplicates()
                 .eraseToAnyPublisher()
         }

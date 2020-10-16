@@ -43,8 +43,7 @@ extension StockQuoteRowView {
         var onLastPrice: AnyPublisher<Float, Never> {
             provider.of(TradernetSocketManager.self)
                 .onQuote(ticker: quote.ticker)
-                .filter({ $0.lastTradePrice != nil })
-                .map({ $0.lastTradePrice! })
+                .compactMap({ $0.lastTradePrice })
                 .removeDuplicates()
                 .eraseToAnyPublisher()
         }
