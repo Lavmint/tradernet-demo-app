@@ -17,9 +17,6 @@ end
 
 post_install do |installer|
   	installer.pods_project.targets.each do |target|
-		target.build_configurations.each do |config|
-            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-        end
   		generate_xcframework(target, "./StockQuotesLibrary/Frameworks")
   	end
 end
@@ -33,6 +30,10 @@ def generate_xcframework(target, xcframework_path)
 	archive_root = "./Archive/#{target.name}"
 	sdks = ["iphoneos", "iphonesimulator"]
 	frameworks_args = ""
+
+	target.build_configurations.each do |config|
+	    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+    end
 
 	sdks.each { |sdk|
 
