@@ -12,14 +12,11 @@ let package = Package(
             targets: ["TradernetClient"]),
     ],
     dependencies: [
-        .package(
-            name: "SocketIO",
-            url: "https://github.com/socketio/socket.io-client-swift",
-            .upToNextMinor(from: "15.0.0"))
+        
     ],
     targets: [
-        .target(
-            name: "TradernetClient",
-            dependencies: ["SocketIO"])
+        .target(name: "TradernetClient", dependencies: ["SocketIO", "Starscream"]),
+        .binaryTarget(name: "SocketIO", path: "Frameworks/Socket.IO-Client-Swift.xcframework"),
+        .binaryTarget(name: "Starscream", path: "Frameworks/Starscream.xcframework")
     ]
 )

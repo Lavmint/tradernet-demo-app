@@ -1,0 +1,42 @@
+name: StockQuotes
+options:
+  groupSortPosition: top
+  bundleIdPrefix: me.aaverkin
+  deploymentTarget:
+    iOS: "13.0"
+packages:
+  StockQuotesLibrary:
+    path: StockQuotesLibrary
+targets:
+  StockQuotes:
+    type: application
+    platform: iOS
+    settings:
+      base:
+        PRODUCT_NAME: StockQuotes
+    info:
+      path: StockQuotes/Info.plist
+      properties:
+        CFBundlePackageType: $(PRODUCT_BUNDLE_PACKAGE_TYPE)
+        UIApplicationSupportsIndirectInputEvents: true
+        LSRequiresIPhoneOS: true
+        UIRequiredDeviceCapabilities:
+          - armv7
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        UISupportedInterfaceOrientations: 
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    sources:
+      - StockQuotes
+    dependencies:
+      - package: StockQuotesLibrary
+
