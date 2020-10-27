@@ -47,6 +47,7 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
+build
 
 # CocoaPods
 #
@@ -91,5 +92,5 @@ iOSInjectionProject/
 
 # CocoaPods
 Pods
-Archive
-StockQuotesLibrary/Frameworks
+PodsArchive
+*.xcframework
