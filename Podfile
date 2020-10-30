@@ -2,15 +2,13 @@
 require 'find'
 
 platform :ios, '13.0'
-
 install! 'cocoapods', :integrate_targets => false
+use_frameworks!
 
 target 'StockQuotes' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
 
   # Pods for StockQuotes
-  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  pod 'Socket.IO-Client-Swift', '15.2.0'
 
 end
 
@@ -58,6 +56,7 @@ def generate_xcframework(target, sdks, xcarchive_path, xcframework_path, clean_u
 
 	target.build_configurations.each do |config|
 	    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+	    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
     end
 
 	frameworks_args = ""
@@ -72,7 +71,7 @@ def generate_xcframework(target, sdks, xcarchive_path, xcframework_path, clean_u
 		end
 
 		puts "Building #{target.name} for #{sdk}..."
-		# system("xcodebuild archive -quiet -project ./Pods/Pods.xcodeproj -scheme #{target.name} -sdk #{sdk} -parallelizeTargets -archivePath #{archive_path} SKIP_INSTALL=NO")
+		system("xcodebuild archive -quiet -project ./Pods/Pods.xcodeproj -scheme #{target.name} -sdk #{sdk} -parallelizeTargets -archivePath #{archive_path} SKIP_INSTALL=NO")
 
 		if path = find(target.name, sdk)
 			frameworks_args += "-framework #{path} "
